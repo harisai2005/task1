@@ -1,0 +1,99 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #12a1f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Flex container for the tagline and carousel */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tagline styling with flexbox adjustments */
+.tagline {
+  font-size: 2.5em;
+  margin: 10px 0; /* Reduced margin to bring the tagline closer to the carousel */
+  color: #333;
+  text-align: center;
+}
+
+/* Carousel styles */
+.carousel {
+  max-width: 600px;
+  margin-top: 0; /* No extra space above */
+}
+
+.carousel-inner img {
+  transform: scale(0.8); /* Scale the image */
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease; /* Smooth transition on hover */
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+}
+
+/* Hover effect to slightly enlarge the images */
+.carousel-inner img:hover {
+  transform: scale(0.75);
+}
+
+/* Flexbox styling for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 2em;
+  }
+
+  .carousel-inner img {
+    transform: scale(0.6); /* Adjust the scale for smaller screens */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 1.5em;
+  }
+
+  .carousel-inner img {
+    transform: scale(0.5); /* Further scale down for mobile devices */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 35px;
+  }
+}
